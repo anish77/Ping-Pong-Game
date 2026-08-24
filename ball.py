@@ -18,7 +18,7 @@ class Ball(Turtle):
 
     def bounce_y(self):
         self.y_move *= -1 #Change the direction
-        self.move_speed *= -0.9
+        self.move_speed *= 0.9
 
     def bounce_x(self):
         self.x_move *= -1 #Change the direction
