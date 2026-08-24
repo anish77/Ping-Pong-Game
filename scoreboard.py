@@ -9,6 +9,14 @@ class Scoreboard(Turtle):
         self.l_score = 0
         self.r_score = 0
         self.update_scoreboard()
+        self.drow_the_line()
+
+    def drow_the_line(self):
+        for y in range(-300, 300, 20):
+            self.goto(0, y)
+            self.pendown()
+            self.goto(0, y + 10)
+            self.penup()
 
     def update_scoreboard(self):
         self.clear()
@@ -20,7 +28,9 @@ class Scoreboard(Turtle):
     def l_point(self):
         self.l_score += 1
         self.update_scoreboard()
+        self.drow_the_line()
 
     def r_point(self):
         self.r_score += 1
         self.update_scoreboard()
+        self.drow_the_line()
